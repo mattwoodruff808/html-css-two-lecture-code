@@ -20,17 +20,26 @@ div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    left: 75px;
+    bottom: 50px;
+    z-index: 1;
 }
 
 .fixed {
     background-image: url('https://media.makeameme.org/created/fixed.jpg');
     background-size: cover;
     background-position: center;
+    position: fixed;
+    /* bottom: 0px; */
+    top: 0px;
+    left: 0px;
 }
 
 .absolute-parent {
     height: 250px;
     width: 250px;
+    position: relative;
 }
 
 .absolute-child {
@@ -39,6 +48,9 @@ div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
 }
 
 .sticky {
@@ -46,12 +58,30 @@ div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
+    position: sticky;
+    top: 10px;
 }
 
 .flexbox-examples {
     height: 75vh;
     box-sizing: border-box;
     border: 2px solid black;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: center;
 }
 
 .flexbox-examples div {
@@ -65,4 +95,32 @@ div {
 
 .overflow-shadow-example {
     margin: 0 auto;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow-y: scroll;
+    box-shadow: 5px 5px 5px 2px black;
+}
+
+header {
+    height: 75px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    background: rebeccapurple;
+    color: white;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 60px;
+}
+
+header nav {
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
 }
